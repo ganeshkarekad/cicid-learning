@@ -24,6 +24,10 @@ jobs:
         uses: 'phips28/gh-action-bump-version@master'
         with:
           tag-prefix: 'v'
+          major-wording:  'MAJOR,cut-major'
+          minor-wording:  'add,Adds,new'
+          patch-wording:  'patch,fixes'
+          rc-wording:     'RELEASE,alpha'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'cat package.json'
